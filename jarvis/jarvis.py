@@ -222,4 +222,4 @@ if __name__ == '__main__':
             speak(f"current pressure is is {pressure_wind} atm")
 
         # speak("----------------------SIR , DO YOU HAVE OTHER WORK-------------------------")
-#qwertyu
+#qwertyucomment
