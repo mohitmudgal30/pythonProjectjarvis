@@ -207,7 +207,7 @@ if __name__ == '__main__':
             api_link = requests.get(complete_api_link)
             api_data = api_link.json()
 
-            # create variables to store and display data
+            # create variables to store and display dataa
             temp_city = ((api_data['main']['temp']) - 273.15)
             weather_desc = api_data['weather'][0]['description']
             hmdt = api_data['main']['humidity']
