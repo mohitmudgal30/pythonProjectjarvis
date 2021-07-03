@@ -101,7 +101,7 @@ if __name__ == '__main__':
         elif 'play music' in query or "play song" in query:
             speak("Here you go with music")
             # music_dir = "G:\\Song"
-            music_dir = "F://songs"
+            music_dir = "E:\\SONGS\\new song"
             songs = os.listdir(music_dir)
             print(songs)
             random = os.startfile(os.path.join(music_dir, songs[0]))
@@ -128,7 +128,7 @@ if __name__ == '__main__':
                 speak("all will be good sir")
 
         elif "who are you" in query:
-            speak("I am your virtual assistant created by Nivesh")
+            speak("I am your virtual assistant created by Mohit Mudgal")
         elif "what's your name" in query or "What is your name" in query:
             speak("My friends call me")
             speak("jarvis 3.0")
@@ -148,7 +148,7 @@ if __name__ == '__main__':
         elif "send message" in query:
             speak("what msg do you want to send")
             m = takecommand().lower()
-            kit.sendwhatmsg("+919660921558", m, 10, 59)
+            kit.sendwhatmsg("+918302588287", m, 12, 4)
             # there should be gap of 2 minutes to send message
         elif "play videos on youtube" in query:
             speak("tell me song which you want to play")
@@ -165,7 +165,7 @@ if __name__ == '__main__':
                 print(e)
                 speak("sorry sir i am not able to send the email")
 
-        elif "shut up" in query:
+        elif "just shut up" in query:
             speak("thanks for using me,have a good day")
             sys.exit()
         # to close any application
@@ -220,6 +220,7 @@ if __name__ == '__main__':
             speak(f"Current Humidity  is {hmdt}%")
             speak(f"Current wind speed  is {wind_spd} kmph")
             speak(f"current pressure is is {pressure_wind} atm")
+
 
         # speak("----------------------SIR , DO YOU HAVE OTHER WORK-------------------------")
 #qwertyucomment
