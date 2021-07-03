@@ -55,7 +55,7 @@ def wish():
         speak("good afternoon")
     else:
         speak("good evening")
-    assname = ("jarvis 3.0")
+    assname = ("jarvis mohit mudgal sir")
     speak(f"I am your {assname}")
     speak("How can i help you")
 
@@ -64,8 +64,8 @@ def sendemail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('kijep96578@jq600.com', 'nijesh123')
-    server.sendmail('kijep96578@jq600.com', to, content)
+    server.login('mudgalmohit30@gmail.com', '')
+    server.sendmail('2019pietcsnivesh116@poornima.org', to, content)
     server.close()
 
 
@@ -148,7 +148,7 @@ if __name__ == '__main__':
         elif "send message" in query:
             speak("what msg do you want to send")
             m = takecommand().lower()
-            kit.sendwhatmsg("+918302588287", m, 12, 4)
+            kit.sendwhatmsg("+918302588287", m, 12, 11)
             # there should be gap of 2 minutes to send message
         elif "play videos on youtube" in query:
             speak("tell me song which you want to play")
