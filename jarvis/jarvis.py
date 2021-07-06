@@ -8,6 +8,7 @@ import requests
 import wikipedia
 import webbrowser
 import socket
+from cv2 import cv2
 import pywhatkit as kit
 import smtplib  # this module is used to send email to anyone : pip install secure-smptlib
 import sys
@@ -223,11 +224,20 @@ if __name__ == '__main__':
             speak(f"Current Humidity  is {hmdt}%")
             speak(f"Current wind speed  is {wind_spd} kmph")
             speak(f"current pressure is is {pressure_wind} atm")
-        elif "open" in query:
+        elif "open word" in query:
             doc=docx.Document()
             parag=doc.add_paragraph("hello")
             doc.save("mohit.docx")
             os.system("start mohit.docx")
+        elif "open camp"  in query:
+            cam = cv2.VideoCapture(0)
+            while cam.isOpened():
+                ret , frame=cam.read();
+                if cv2.waitKey(10)==ord('q'):
+                    break
+                cv2.imshow('my face',frame)
+
+
 
         # speak("----------------------SIR , DO YOU HAVE OTHER WORK-------------------------")
 #qwertyucomment
