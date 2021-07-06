@@ -1,3 +1,4 @@
+import time
 import pyttsx3
 import datetime
 import os
@@ -11,9 +12,8 @@ import pywhatkit as kit
 import smtplib  # this module is used to send email to anyone : pip install secure-smptlib
 import sys
 import pyjokes
-
 import speech_recognition as sr
-
+import docx
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
 engine.setProperty('voices', voices[0].id)
@@ -99,12 +99,15 @@ if __name__ == '__main__':
             lpath = "C:\\Users\\pc\\eclipse\\java-latest-released\\eclipse\\eclipse.exe"
             os.system(lpath)
         elif 'play music' in query or "play song" in query:
+
+            n = random.randint(0,10)
+            print(n)
             speak("Here you go with music")
-            # music_dir = "G:\\Song"
+            # music_dir = "E:\\SONGS\\new song"
             music_dir = "E:\\SONGS\\new song"
-            songs = os.listdir(music_dir)
-            print(songs)
-            random = os.startfile(os.path.join(music_dir, songs[0]))
+            song = os.listdir(music_dir)
+            print(song)
+            os.startfile(os.path.join(music_dir, song[n]))
         # online task
 
         elif "wikipedia" in query:
@@ -136,7 +139,7 @@ if __name__ == '__main__':
         elif "hostname" in query:
             hostname = socket.gethostname()
             IPAddr = socket.gethostbyname(hostname)
-            print("your computer name is :" + hostname)
+            print("your computer name  is :" + hostname)
             print("your ip address is :" + IPAddr)
             speak(f"Your Computer Name is:{hostname}")
             speak(f"Your Computer IP Address is:{IPAddr}")
@@ -220,7 +223,11 @@ if __name__ == '__main__':
             speak(f"Current Humidity  is {hmdt}%")
             speak(f"Current wind speed  is {wind_spd} kmph")
             speak(f"current pressure is is {pressure_wind} atm")
-
+        elif "open" in query:
+            doc=docx.Document()
+            parag=doc.add_paragraph("hello")
+            doc.save("mohit.docx")
+            os.system("start mohit.docx")
 
         # speak("----------------------SIR , DO YOU HAVE OTHER WORK-------------------------")
 #qwertyucomment
