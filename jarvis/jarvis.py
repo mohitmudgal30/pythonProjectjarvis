@@ -94,14 +94,12 @@ if __name__ == '__main__':
 
         elif "open adobe reader" in query:
             speak("opening adobe reader")
-            apath = "C:\Program Files (x86)\Adobe\\Reader 10.0\\Reader\\AcroRd32.exe"
+            apath = "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Adobe Reader XI"
             os.startfile(apath)
+
         elif "open command prompt" in query:
             os.system("start cmd")
-        elif "open eclipse" in query:
-            speak("opening eclipse")
-            lpath = "C:\\Users\\pc\\eclipse\\java-latest-released\\eclipse\\eclipse.exe"
-            os.system(lpath)
+
         elif 'play music' in query or "play song" in query:
 
             n = random.randint(1,10)
@@ -110,8 +108,12 @@ if __name__ == '__main__':
             # music_dir = "E:\\SONGS\\new song"
             music_dir = "E:\\SONGS\\new song"
             song = os.listdir(music_dir)
-            print(song)
             os.startfile(os.path.join(music_dir, song[n]))
+
+        elif 'window camp' in query:
+            os.system("start microsoft.windows.camera:")
+
+
 
         # online task
 
