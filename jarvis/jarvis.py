@@ -104,7 +104,7 @@ if __name__ == '__main__':
             os.system(lpath)
         elif 'play music' in query or "play song" in query:
 
-            n = random.randint(0,10)
+            n = random.randint(1,10)
             print(n)
             speak("Here you go with music")
             # music_dir = "E:\\SONGS\\new song"
