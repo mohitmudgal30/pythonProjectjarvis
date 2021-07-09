@@ -203,10 +203,10 @@ if __name__ == '__main__':
         elif "tell me a joke" in query:
             joke = pyjokes.get_joke()
             speak(joke)
-        elif "shutdown  system" in query:
-            os.system("shutdown /s /t 5")
+        elif "shutdown the system" in query:
+            os.system("shutdown /s /t 1")
         elif "restart the system" in query:
-            os.system("shutdown /r /t 5")
+            os.system("shutdown /r /t 1")
         elif "sleep the system" in query:
             os.system("rundll32.exe powrprof.dll,SetSuspendState 0,1,0")
 
