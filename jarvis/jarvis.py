@@ -15,9 +15,12 @@ import sys
 import pyjokes
 import speech_recognition as sr
 import docx
+
+
 engine = pyttsx3.init('sapi5')
-voices = engine.getProperty('voices')
-engine.setProperty('voices', voices[0].id)
+voice_id = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0"
+voices=engine.getProperty('voice')
+engine.setProperty('voice',voice_id)
 
 
 # text to speech
@@ -170,7 +173,7 @@ if __name__ == '__main__':
                 speak("sorry sir i am not able to send the email")
 
         elif "just shut up" in query:
-            speak("thanks for using me,have a good day")
+            speak("thanks for using me , have a good day")
             sys.exit()
         # to close any application
         elif "close notepad" in query:
