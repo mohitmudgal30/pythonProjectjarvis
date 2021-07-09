@@ -177,7 +177,7 @@ if __name__ == '__main__':
                 print(e)
                 speak("sorry sir i am not able to send the email")
 
-        elif "just shut up" in query:
+        elif "shut up" in query:
             speak("thanks for using me , have a good day")
             sys.exit()
         # to close any application
@@ -203,6 +203,7 @@ if __name__ == '__main__':
         elif "tell me a joke" in query:
             joke = pyjokes.get_joke()
             speak(joke)
+
         elif "shutdown the system" in query:
             os.system("shutdown /s /t 1")
         elif "restart the system" in query:
