@@ -22,13 +22,11 @@ voice_id = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN
 voices=engine.getProperty('voice')
 engine.setProperty('voice',voice_id)
 
-
 # text to speech
 def speak(audio):  # converts in audio
     engine.say(audio)
     print(audio)
     engine.runAndWait()
-
 
 # to voice into text
 def takecommand():
@@ -48,7 +46,6 @@ def takecommand():
 
     return query
 
-
 # wish
 def wish():
     hour = int(datetime.datetime.now().hour)
@@ -63,12 +60,11 @@ def wish():
     speak(f"I am your {assname}")
     speak("How can i help you")
 
-
 def sendemail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('mudgalmohit30@gmail.com', '')
+    server.login('ramu@gmail.com', '')
     server.sendmail('2019pietcsnivesh116@poornima.org', to, content)
     server.close()
 
