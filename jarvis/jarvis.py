@@ -156,10 +156,10 @@ if __name__ == '__main__':
         elif "send message" in query:
             speak("what msg do you want to send")
             m = takecommand().lower()
-            kit.sendwhatmsg("+918302588287", m, 12, 11)
+            kit.sendwhatmsg("+918302588287", m, 17,5)
             # there should be gap of 2 minutes to send message
-        elif "play videos on youtube" in query:
-            speak("tell me song which you want to play")
+        elif "play video on youtube" in query:
+            speak("tell me video which you want to play")
             sm = takecommand().lower()
             kit.playonyt(sm)  # this function works as a play songs on youtube
         elif "email to nivesh" in query:
@@ -241,6 +241,20 @@ if __name__ == '__main__':
                 if cv2.waitKey(10)==ord('q'):
                     break
                 cv2.imshow('my face',frame)
+
+
+        elif "hide all files" in query or "hide this folder" in query or "visible for everyone" in query:
+            fn = 'W:\\assi'
+            p = os.popen('attrib +h ' + fn)
+            t = p.read()
+            p.close()
+            speak("sir all the files  in this folder are now hidden")
+        elif "show hidden file" in query:
+            fn = 'W:\\assi'
+            p = os.popen('attrib -h ' + fn)
+            t = p.read()
+            p.close()
+            speak("sir all the files  in this folder are shown now ")
 
 
 
