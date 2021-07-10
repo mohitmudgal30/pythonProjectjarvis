@@ -17,7 +17,7 @@ import speech_recognition as sr
 import docx
 import psutil
 
-
+#voice
 engine = pyttsx3.init('sapi5')
 voice_id = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0"
 voices=engine.getProperty('voice')
@@ -47,6 +47,7 @@ def takecommand():
 
     return query
 
+
 # wish
 def wish():
     hour = int(datetime.datetime.now().hour)
@@ -61,6 +62,7 @@ def wish():
     speak(f"I am your {assname}")
     speak("How can i help you")
 
+#sendemail
 def sendemail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
